@@ -1,0 +1,15 @@
+﻿@{ 
+    var product = ViewData["product"] as ProductModel;
+}
+
+<h4>@ViewData["Title"]</h4>
+
+<div class="card bg-info text-white">
+    <h1 class="card-header">@product.Name</h1>
+    <p class="card-text">
+          Giá : @product.Price 
+    </p>
+    </div>
+</div>
+
+@this.Path
