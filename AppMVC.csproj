@@ -4,4 +4,17 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\ProductManager\Controllers\" />
+    <Folder Include="Areas\ProductManager\Data\" />
+    <Folder Include="Areas\ProductManager\Models\" />
+    <Folder Include="Areas\ProductManager\Views\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="wwwroot\planet\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
 </Project>
