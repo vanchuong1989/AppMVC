@@ -1,4 +1,5 @@
 ﻿using AppMVC.ExtendMethods;
+using AppMVC.Models;
 using AppMVC.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Routing.Constraints;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,6 +33,13 @@ namespace AppMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<AppDbContext>(options => {
+                string connectString = Configuration.GetConnectionString("AppMvc");
+                options.UseSqlServer(connectString);
+            });
+
+
             services.AddControllersWithViews();
             services.AddRazorPages();
 
