@@ -1,0 +1,48 @@
+﻿$contactBackground:green;
+
+
+@media only screen and (max-width : 768px) {
+    .contact-firstcol {
+        background-color: $contactBackground;
+        color: white;
+        text-align: center;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        h4 {
+            line-height: 40px;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100px;
+        }
+    }
+}
+
+@media only screen and (min-width : 768px) {
+    .contact-firstcol {
+        background-color: $contactBackground;
+        color: white;
+        text-align: center;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    img {
+        max-width: 100px;
+    }
+}
+
+.formcontact {
+    label {
+        font-weight: 700;
+    }
+
+    .btn-primary {
+        background-color:$contactBackground;
+    }
+}
+
+
+

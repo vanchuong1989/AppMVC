@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AppMVC.Models.Contact;
+using Microsoft.EntityFrameworkCore;
 
 namespace AppMVC.Models
 {
@@ -31,6 +32,8 @@ namespace AppMVC.Models
                 //    }
                 //}
 
-            }       
-        }
+            }
+
+        public DbSet<ContactModel> Contacts { get; set; }
+    }
 }
